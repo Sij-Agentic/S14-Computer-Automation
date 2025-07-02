@@ -144,12 +144,37 @@ class DeepExplorer:
     def _initialize_application(self) -> bool:
         """Initialize the application and FDOM framework"""
         try:
-            # Create FDOM for the application
-            result = self.fdom_creator.create_fdom_for_app(self.app_executable_path)
-            
-            if not result.get("success", False):
-                self.console.print(f"[red]❌ Failed to initialize FDOM: {result.get('error', 'Unknown error')}[/red]")
+            # STEP 1: Screen Selection
+            screen_id = self.fdom_creator._handle_screen_selection()
+            if not screen_id:
+                self.console.print("[red]❌ Screen selection failed[/red]")
                 return False
+            
+            # STEP 2: Launch Application  
+            app_result = self.fdom_creator._launch_application(self.app_executable_path, screen_id)
+            if not app_result["success"]:
+                self.console.print(f"[red]❌ Failed to launch application: {app_result.get('error', 'Unknown error')}[/red]")
+                return False
+            
+            # STEP 3: Initialize App-Specific Modules (loads existing fDOM if present)
+            if not self.fdom_creator._initialize_app_modules():
+                self.console.print("[red]❌ Failed to initialize app modules[/red]")
+                return False
+            
+            # STEP 4: CONDITIONAL - Create Initial fDOM only if needed
+            if len(self.fdom_creator.state_manager.fdom_data.get("states", {})) == 0:
+                # Fresh run - create initial fDOM
+                self.console.print(f"[yellow]🆕 Fresh session detected - creating initial fDOM[/yellow]")
+                initial_state = self.fdom_creator._create_initial_fdom()
+                if not initial_state["success"]:
+                    self.console.print(f"[red]❌ Initial fDOM creation failed: {initial_state.get('error', 'Unknown error')}[/red]")
+                    return False
+            else:
+                # Existing data - skip Step 4
+                self.console.print(f"[green]♻️ Existing session detected - skipping fDOM creation[/green]")
+            
+            # STEP 5: SKIP THE INTERACTIVE EXPLORATION LOOP - we handle this ourselves
+            self.console.print(f"[cyan]🤖 Skipping interactive mode - using automated deep exploration[/cyan]")
             
             # Get initialized components
             self.element_interactor = self.fdom_creator.element_interactor
@@ -159,7 +184,8 @@ class DeepExplorer:
                 self.console.print("[red]❌ Failed to get required components from FDOM creator[/red]")
                 return False
             
-            self.console.print(f"[green]✅ Application initialized: {result['app_name']}[/green]")
+            app_name = getattr(self.fdom_creator, 'current_app_name', 'unknown_app')
+            self.console.print(f"[green]✅ Application initialized: {app_name}[/green]")
             return True
             
         except Exception as e:
