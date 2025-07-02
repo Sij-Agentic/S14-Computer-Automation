@@ -1,0 +1,57 @@
+{
+  "success": true,
+  "exploration_summary": {
+    "total_duration_seconds": 319.715913,
+    "total_states_discovered": 0,
+    "total_elements_discovered": 0,
+    "total_interactions": 0,
+    "successful_interactions": 0,
+    "failed_interactions": 0,
+    "success_rate": 0.0,
+    "dialogs_discovered": 0,
+    "menus_discovered": 0,
+    "deadends_found": 0,
+    "max_depth_reached": 0
+  },
+  "discovered_states": {},
+  "exploration_graph": {},
+  "strategy_used": {
+    "max_depth": 8,
+    "max_states_per_level": 100,
+    "max_total_states": 1000,
+    "backtrack_on_deadend": true,
+    "explore_dialogs": true,
+    "explore_menus": true,
+    "explore_context_menus": true
+  },
+  "automation_analysis": {
+    "total_runtime_minutes": 5.3288666,
+    "automation_metrics": {
+      "coverage_efficiency": 0.0,
+      "discovery_rate": 0.0,
+      "interaction_success_rate": 0.0,
+      "depth_coverage": {
+        "depth_distribution": {},
+        "max_depth_reached": 0,
+        "average_depth": 0.0,
+        "deep_states_ratio": 0.0
+      },
+      "functionality_coverage": {
+        "dialog_coverage": 0.0,
+        "menu_coverage": 0.0,
+        "deadend_ratio": 0.0,
+        "functional_states": 0,
+        "functionality_diversity": 0
+      },
+      "automation_score": 0.0
+    },
+    "efficiency_assessment": "Poor - Low discovery rate",
+    "coverage_assessment": "Poor - Limited coverage, many areas missed",
+    "recommendations": [
+      "Consider improving element detection accuracy - low success rate detected",
+      "Increase exploration time or reduce delays for better discovery rate",
+      "Increase max_depth setting to explore deeper application layers",
+      "Enable more interaction types (context menus, dialogs) for broader coverage"
+    ]
+  }
+}

@@ -1,0 +1,915 @@
+{
+  "app_name": "chrome",
+  "loaded": false,
+  "creation_timestamp": "2025-07-02T20:53:58.726785",
+  "navigation_tree": {},
+  "states": {
+    "root": {
+      "id": "root",
+      "parent": null,
+      "trigger_node": null,
+      "trigger_element": "initial_state",
+      "breadcrumb": "root",
+      "image": "C:\\Users\\cydal\\codebase\\EAG\\S14B\\apps\\chrome\\screenshots\\S001.png",
+      "creation_timestamp": "2025-07-02T20:54:24.631799",
+      "analysis_time": 0,
+      "total_elements": 43,
+      "nodes": {
+        "H0_1": {
+          "bbox": [
+            9,
+            13,
+            56,
+            59
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H0",
+          "status": "pending"
+        },
+        "H1_1": {
+          "bbox": [
+            10,
+            1003,
+            185,
+            1030
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H1",
+          "status": "pending"
+        },
+        "H2_1": {
+          "bbox": [
+            15,
+            65,
+            59,
+            107
+          ],
+          "g_icon_name": "Left Arrow",
+          "g_brief": "Navigates back to the previous page",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H2",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H2_2": {
+          "bbox": [
+            58,
+            63,
+            103,
+            108
+          ],
+          "g_icon_name": "Right Arrow",
+          "g_brief": "Navigates forward to the next page",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H2",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H2_3": {
+          "bbox": [
+            105,
+            63,
+            148,
+            108
+          ],
+          "g_icon_name": "Refresh Icon",
+          "g_brief": "Reloads the current page",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H2",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H2_4": {
+          "bbox": [
+            156,
+            65,
+            201,
+            110
+          ],
+          "g_icon_name": "Google Icon",
+          "g_brief": "Navigates to the Google homepage",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H2",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H2_5": {
+          "bbox": [
+            202,
+            76,
+            428,
+            103
+          ],
+          "g_icon_name": "Search Google or type a URL",
+          "g_brief": "Address bar for searching or entering a website URL",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H2",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H3_1": {
+          "bbox": [
+            19,
+            110,
+            61,
+            152
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H3",
+          "status": "pending"
+        },
+        "H3_2": {
+          "bbox": [
+            78,
+            108,
+            265,
+            157
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H3",
+          "status": "pending"
+        },
+        "H3_3": {
+          "bbox": [
+            268,
+            108,
+            457,
+            159
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H3",
+          "status": "pending"
+        },
+        "H4_1": {
+          "bbox": [
+            314,
+            18,
+            344,
+            52
+          ],
+          "g_icon_name": "X Icon",
+          "g_brief": "Closes the current tab or window",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H4",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H4_2": {
+          "bbox": [
+            357,
+            18,
+            388,
+            55
+          ],
+          "g_icon_name": "Plus Icon",
+          "g_brief": "Opens a new tab",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H4",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H5_1": {
+          "bbox": [
+            516,
+            497,
+            554,
+            542
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H5",
+          "status": "pending"
+        },
+        "H5_2": {
+          "bbox": [
+            562,
+            506,
+            822,
+            534
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H5",
+          "status": "pending"
+        },
+        "H6_1": {
+          "bbox": [
+            524,
+            503,
+            571,
+            530
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H6",
+          "status": "pending"
+        },
+        "H7_1": {
+          "bbox": [
+            546,
+            587,
+            689,
+            698
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H7",
+          "status": "pending"
+        },
+        "H7_2": {
+          "bbox": [
+            689,
+            579,
+            829,
+            705
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H7",
+          "status": "pending"
+        },
+        "H8_1": {
+          "bbox": [
+            795,
+            322,
+            886,
+            417
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H8",
+          "status": "pending"
+        },
+        "H9_1": {
+          "bbox": [
+            820,
+            328,
+            1119,
+            425
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H9",
+          "status": "pending"
+        },
+        "H10_1": {
+          "bbox": [
+            828,
+            653,
+            970,
+            711
+          ],
+          "g_icon_name": "cydal (Sijuad...",
+          "g_brief": "Shows the current website name or URL",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H10",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H10_2": {
+          "bbox": [
+            969,
+            653,
+            1109,
+            711
+          ],
+          "g_icon_name": "Google",
+          "g_brief": "Shows the Google button",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H10",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H11_1": {
+          "bbox": [
+            863,
+            620,
+            1116,
+            654
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H11",
+          "status": "pending"
+        },
+        "H11_2": {
+          "bbox": [
+            1104,
+            587,
+            1248,
+            698
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H11",
+          "status": "pending"
+        },
+        "H11_3": {
+          "bbox": [
+            1248,
+            588,
+            1394,
+            696
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H11",
+          "status": "pending"
+        },
+        "H12_1": {
+          "bbox": [
+            884,
+            355,
+            946,
+            418
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H12",
+          "status": "pending"
+        },
+        "H13_1": {
+          "bbox": [
+            1004,
+            355,
+            1061,
+            440
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H13",
+          "status": "pending"
+        },
+        "H14_1": {
+          "bbox": [
+            1336,
+            495,
+            1370,
+            538
+          ],
+          "g_icon_name": "Microphone Icon",
+          "g_brief": "Starts voice search or input",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H14",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H14_2": {
+          "bbox": [
+            1383,
+            504,
+            1413,
+            531
+          ],
+          "g_icon_name": "Google App Icon",
+          "g_brief": "Opens the Google apps menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H14",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H14_3": {
+          "bbox": [
+            1412,
+            487,
+            1436,
+            552
+          ],
+          "g_icon_name": "Notification Icon",
+          "g_brief": "Shows notifications",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H14",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H15_1": {
+          "bbox": [
+            1661,
+            174,
+            1720,
+            232
+          ],
+          "g_icon_name": "Gmail",
+          "g_brief": "Opens Gmail in a new tab",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H15",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H15_2": {
+          "bbox": [
+            1720,
+            174,
+            1794,
+            231
+          ],
+          "g_icon_name": "Images",
+          "g_brief": "Opens Google Images",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H15",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H15_3": {
+          "bbox": [
+            1803,
+            177,
+            1847,
+            227
+          ],
+          "g_icon_name": "Grid Icon",
+          "g_brief": "Opens the Google apps menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H15",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H15_4": {
+          "bbox": [
+            1863,
+            176,
+            1910,
+            227
+          ],
+          "g_icon_name": "P",
+          "g_brief": "Opens the Profile",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H15",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H16_1": {
+          "bbox": [
+            1698,
+            968,
+            1911,
+            1013
+          ],
+          "g_icon_name": "Customise Chrome",
+          "g_brief": "Opens the customize Chrome menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H16",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H17_1": {
+          "bbox": [
+            1734,
+            75,
+            1765,
+            105
+          ],
+          "g_icon_name": "Star Icon",
+          "g_brief": "Adds the current page to bookmarks",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H17",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H18_1": {
+          "bbox": [
+            1766,
+            10,
+            1808,
+            55
+          ],
+          "g_icon_name": "Minus Icon",
+          "g_brief": "Minimize window",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H18",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H18_2": {
+          "bbox": [
+            1818,
+            9,
+            1864,
+            58
+          ],
+          "g_icon_name": "Square Icon",
+          "g_brief": "Maximize/Restore window",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H18",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H18_3": {
+          "bbox": [
+            1873,
+            9,
+            1926,
+            59
+          ],
+          "g_icon_name": "X Icon",
+          "g_brief": "Closes the current window",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H18",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H19_1": {
+          "bbox": [
+            1788,
+            65,
+            1831,
+            112
+          ],
+          "g_icon_name": "Music Icon",
+          "g_brief": "Plays Music",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H19",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H19_2": {
+          "bbox": [
+            1835,
+            65,
+            1878,
+            113
+          ],
+          "g_icon_name": "P",
+          "g_brief": "Opens the Profile",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H19",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "H19_3": {
+          "bbox": [
+            1880,
+            65,
+            1919,
+            113
+          ],
+          "g_icon_name": "Three dots Icon",
+          "g_brief": "Opens the Menu",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "H19",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "V0_1": {
+          "bbox": [
+            57,
+            15,
+            330,
+            54
+          ],
+          "g_icon_name": "New Tab",
+          "g_brief": "Opens a New Tab",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "text",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "V0",
+          "status": "pending",
+          "autocaptioning": "done"
+        },
+        "HL0_1": {
+          "bbox": [
+            80,
+            275,
+            1031,
+            592
+          ],
+          "g_icon_name": "unanalyzed",
+          "g_brief": "Not analyzed by Gemini",
+          "g_enabled": true,
+          "g_interactive": true,
+          "g_type": "icon",
+          "m_id": null,
+          "y_id": null,
+          "o_id": null,
+          "type": "icon",
+          "source": "unknown",
+          "group": "HL0",
+          "status": "pending"
+        }
+      }
+    }
+  },
+  "edges": [],
+  "last_updated": "2025-07-02T20:54:24.635651",
+  "total_states": 1,
+  "exploration_stats": {
+    "pending_nodes": 43,
+    "explored_nodes": 0,
+    "non_interactive_nodes": 0,
+    "total_nodes": 43
+  }
+}

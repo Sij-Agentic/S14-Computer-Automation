@@ -1,0 +1,270 @@
+{
+  "success": true,
+  "exploration_summary": {
+    "total_duration_seconds": 2029.320353,
+    "total_states_discovered": 20,
+    "total_elements_discovered": 480,
+    "total_interactions": 47,
+    "successful_interactions": 45,
+    "failed_interactions": 1,
+    "success_rate": 95.74468085106383,
+    "dialogs_discovered": 0,
+    "menus_discovered": 0,
+    "deadends_found": 0,
+    "max_depth_reached": 0
+  },
+  "discovered_states": {
+    "root": {
+      "depth": 0,
+      "parent_state": null,
+      "trigger_element": null,
+      "element_count": 25,
+      "explored": true,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:19:55.396922"
+    },
+    "root_volume_down": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H8_1",
+      "element_count": 126,
+      "explored": true,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:20:41.440484"
+    },
+    "root_unanalyzed": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::V0_1",
+      "element_count": 10,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:21:37.317611"
+    },
+    "root_playback": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H2_2",
+      "element_count": 24,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:22:41.252895"
+    },
+    "root_crop": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H5_2",
+      "element_count": 1,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:23:07.863592"
+    },
+    "root_deinterlace": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H4_2",
+      "element_count": 60,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:26:47.271291"
+    },
+    "root_audio": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H2_3",
+      "element_count": 9,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:28:03.243463"
+    },
+    "root_previous": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H0_2",
+      "element_count": 1,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:28:29.685615"
+    },
+    "root_stop": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H0_3",
+      "element_count": 1,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:28:55.938555"
+    },
+    "root_options,_arrow": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H3_2",
+      "element_count": 1,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:29:22.612617"
+    },
+    "root_mute": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H8_2",
+      "element_count": 136,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:32:57.177344"
+    },
+    "root_view": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H6_1",
+      "element_count": 13,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:34:29.900111"
+    },
+    "root_video": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H2_4",
+      "element_count": 10,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:35:30.686583"
+    },
+    "root_subtitle": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H2_5",
+      "element_count": 1,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:35:57.515031"
+    },
+    "root_help": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H6_2",
+      "element_count": 5,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:36:40.200134"
+    },
+    "root_play": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H0_1",
+      "element_count": 27,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:39:37.163774"
+    },
+    "root_media": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H2_1",
+      "element_count": 17,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:41:10.903825"
+    },
+    "root_loop": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H5_1",
+      "element_count": 0,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:42:12.946425"
+    },
+    "root_rewind,_stop,_expand,_filter": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H3_1",
+      "element_count": 1,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:42:41.756901"
+    },
+    "root_x": {
+      "depth": 1,
+      "parent_state": "root",
+      "trigger_element": "root::H10_1",
+      "element_count": 12,
+      "explored": false,
+      "is_deadend": false,
+      "is_dialog": false,
+      "is_menu": false,
+      "discovered_at": "2025-07-02T23:43:51.476481"
+    }
+  },
+  "exploration_graph": {
+    "root": [
+      "root_volume_down",
+      "root_unanalyzed",
+      "root_playback",
+      "root_crop",
+      "root_deinterlace",
+      "root_audio",
+      "root_previous",
+      "root_stop",
+      "root_options,_arrow",
+      "root_mute",
+      "root_view",
+      "root_video",
+      "root_subtitle",
+      "root_help",
+      "root_play",
+      "root_media",
+      "root_loop",
+      "root_rewind,_stop,_expand,_filter",
+      "root_x"
+    ]
+  },
+  "strategy_used": {
+    "max_depth": 8,
+    "max_states_per_level": 100,
+    "max_total_states": 1000,
+    "backtrack_on_deadend": true,
+    "explore_dialogs": true,
+    "explore_menus": true,
+    "explore_context_menus": true
+  }
+}

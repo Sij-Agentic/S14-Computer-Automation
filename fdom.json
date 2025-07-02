@@ -1,0 +1,164 @@
+{
+  "splash_interactions": [
+    {
+      "timestamp": "2025-06-10T07:21:17.542815",
+      "group_id": "H22",
+      "interaction_type": "splash_screen",
+      "action": "Clicked H22 for splash_screen",
+      "coordinates": [
+        1010,
+        569
+      ],
+      "successful": true
+    },
+    {
+      "timestamp": "2025-06-10T07:21:33.247090",
+      "group_id": "V17",
+      "interaction_type": "splash_screen",
+      "action": "Clicked V17 for splash_screen",
+      "coordinates": [
+        848,
+        567
+      ],
+      "successful": true
+    },
+    {
+      "timestamp": "2025-06-10T07:21:47.980546",
+      "group_id": "H24",
+      "interaction_type": "splash_screen",
+      "action": "Clicked H24 for splash_screen",
+      "coordinates": [
+        819,
+        737
+      ],
+      "successful": true
+    },
+    {
+      "timestamp": "2025-06-10T07:33:17.040546",
+      "group_id": "H22",
+      "interaction_type": "splash_screen",
+      "action": "Clicked H22 for splash_screen",
+      "coordinates": [
+        1010,
+        569
+      ],
+      "successful": true
+    }
+  ],
+  "metadata": {
+    "splash_screen_history": {
+      "splash_screen_interaction": {
+        "timestamp": "2025-06-10T07:46:02.600794",
+        "successful_group": "H24",
+        "coordinates": [
+          833,
+          343
+        ],
+        "splash_present": true,
+        "startup_required": true
+      }
+    },
+    "splash_attempts": [
+      {
+        "timestamp": 1749749800.491434,
+        "group_id": "H7",
+        "coordinates": [
+          2818,
+          240
+        ],
+        "success": true,
+        "datetime": "2025-06-12T23:06:40.491434"
+      },
+      {
+        "timestamp": 1749750447.1341028,
+        "group_id": "H8",
+        "coordinates": [
+          2855,
+          366
+        ],
+        "success": true,
+        "datetime": "2025-06-12T23:17:27.134102"
+      },
+      {
+        "timestamp": 1749751231.7885747,
+        "group_id": "H46",
+        "coordinates": [
+          3501,
+          662
+        ],
+        "success": true,
+        "datetime": "2025-06-12T23:30:31.788574"
+      },
+      {
+        "timestamp": 1749752137.983782,
+        "group_id": "H23",
+        "coordinates": [
+          3217,
+          444
+        ],
+        "success": true,
+        "datetime": "2025-06-12T23:45:37.983782"
+      },
+      {
+        "timestamp": 1749887268.8691351,
+        "group_id": "H8",
+        "coordinates": [
+          -31108,
+          -31374
+        ],
+        "success": true,
+        "datetime": "2025-06-14T13:17:48.869135"
+      },
+      {
+        "timestamp": 1751491604.5972464,
+        "group_id": "H0",
+        "coordinates": [
+          20,
+          22
+        ],
+        "success": true,
+        "datetime": "2025-07-02T22:26:44.597246"
+      },
+      {
+        "timestamp": 1751494358.2982962,
+        "group_id": "H0",
+        "coordinates": [
+          20,
+          22
+        ],
+        "success": true,
+        "datetime": "2025-07-02T23:12:38.298296"
+      },
+      {
+        "timestamp": 1751495823.3121326,
+        "group_id": "H11",
+        "coordinates": [
+          1130,
+          574
+        ],
+        "success": false,
+        "datetime": "2025-07-02T23:37:03.312132"
+      },
+      {
+        "timestamp": 1751495827.8029044,
+        "group_id": "H4",
+        "coordinates": [
+          743,
+          335
+        ],
+        "success": false,
+        "datetime": "2025-07-02T23:37:07.802904"
+      },
+      {
+        "timestamp": 1751495832.313019,
+        "group_id": "V1",
+        "coordinates": [
+          1135,
+          427
+        ],
+        "success": true,
+        "datetime": "2025-07-02T23:37:12.313019"
+      }
+    ]
+  }
+}
