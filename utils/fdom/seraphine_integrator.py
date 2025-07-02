@@ -19,8 +19,8 @@ current_file = Path(__file__).resolve()
 utils_dir = current_file.parent.parent
 sys.path.append(str(utils_dir))
 
-from config_manager import ConfigManager
-from seraphine import process_image_sync  # FIXED: Use actual function from seraphine.py
+from utils.fdom.config_manager import ConfigManager
+from utils.seraphine import process_image_sync  # FIXED: Use actual function from seraphine.py
 
 class SeraphineIntegrator:
     """

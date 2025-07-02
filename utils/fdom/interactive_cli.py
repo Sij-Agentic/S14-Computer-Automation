@@ -279,7 +279,7 @@ class InteractiveCLI:
     
     def _run_auto_captioner(self, pending_list: List[str]) -> None:
         """Run auto captioner on all pending elements"""
-        from .auto_captioner import AutoCaptioner
+        from utils.fdom.auto_captioner import AutoCaptioner
         
         self.console.print(f"\n[bold yellow]🤖 AUTO CAPTIONER STARTING...[/bold yellow]")
         self.console.print(f"[cyan]Will hover over {len(pending_list)} elements to discover captions/tooltips[/cyan]")

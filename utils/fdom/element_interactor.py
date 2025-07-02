@@ -27,12 +27,12 @@ import argparse
 import psutil
 
 # Import our framework modules
-from config_manager import ConfigManager
-from screen_manager import ScreenManager
-from app_controller import AppController
-from state_manager import StateManager
-from seraphine_integrator import SeraphineIntegrator
-from visual_differ import VisualDiffer
+from utils.fdom.config_manager import ConfigManager
+from utils.fdom.screen_manager import ScreenManager
+from utils.fdom.app_controller import AppController
+from utils.fdom.state_manager import StateManager
+from utils.fdom.seraphine_integrator import SeraphineIntegrator
+from utils.fdom.visual_differ import VisualDiffer
 
 # Import modular components
 from utils.fdom.interaction_types import ClickResult, BacktrackStrategy

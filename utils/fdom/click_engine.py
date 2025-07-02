@@ -4,8 +4,8 @@ from typing import Dict, List, Optional, Tuple
 from pathlib import Path
 from rich.console import Console
 
-from .interaction_types import ClickResult
-from .screenshot_manager import ScreenshotManager
+from utils.fdom.interaction_types import ClickResult
+from utils.fdom.screenshot_manager import ScreenshotManager
 
 
 class ClickEngine:

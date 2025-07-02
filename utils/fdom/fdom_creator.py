@@ -11,11 +11,11 @@ from rich.panel import Panel
 from rich.prompt import Confirm, Prompt
 
 # Import all our modules
-from config_manager import ConfigManager
-from screen_manager import ScreenManager  
-from app_controller import AppController
-from state_manager import StateManager
-from element_interactor import ElementInteractor
+from utils.fdom.config_manager import ConfigManager
+from utils.fdom.screen_manager import ScreenManager  
+from utils.fdom.app_controller import AppController
+from utils.fdom.state_manager import StateManager
+from utils.fdom.element_interactor import ElementInteractor
 
 class FDOMCreator:
     """
@@ -32,7 +32,9 @@ class FDOMCreator:
         
         # Pass config to ALL modules
         self.screen_manager = ScreenManager(self.config_manager)
-        self.app_controller = AppController(self.config_manager, self.screen_manager)
+        # AppController expects: app_path, target_screen, config, template_file_path
+        # We'll set app_path and template_file_path later, so initialize with placeholders
+        self.app_controller = None
         
         # App-specific modules (initialized when app is set)
         self.state_manager = None
@@ -45,9 +47,6 @@ class FDOMCreator:
         # CENTRALIZED path management
         self.project_root = Path(__file__).parent.parent.parent
         self.apps_base_dir = self.project_root / "apps"  # ROOT LEVEL
-        
-        # All modules use THESE paths, not their own
-        self.app_controller.apps_base_dir = self.apps_base_dir  # Override
         
     def create_fdom_for_app(self, executable_path: str) -> Dict:
         """Complete fDOM creation workflow with smart detection"""
@@ -114,9 +113,16 @@ class FDOMCreator:
     def _launch_application(self, executable_path: str, screen_id: int) -> Dict:
         """Launch application and take initial screenshot"""
         self.console.print(f"\n[bold yellow]🚀 STEP 2: LAUNCHING APPLICATION[/bold yellow]")
-        
-        # Launch with app_controller
-        launch_result = self.app_controller.launch_app_for_exploration(executable_path, screen_id)
+        # Initialize AppController with correct arguments
+        self.app_controller = AppController(
+            app_path=executable_path,
+            target_screen=screen_id,
+            config=self.config_manager,
+            template_file_path=None
+        )
+        self.app_controller.screen_manager = self.screen_manager
+        self.app_controller.apps_base_dir = self.apps_base_dir  # Override
+        launch_result = self.app_controller.launch_app()
         
         if launch_result["success"]:
             self.current_app_name = launch_result["app_info"]["app_name"]
@@ -161,7 +167,7 @@ class FDOMCreator:
         
         # Initialize ElementInteractor with loaded StateManager
         self.element_interactor = ElementInteractor(
-            app_name=self.current_app_name,
+            app_executable_path=self.app_controller.app_path,
             state_manager=self.state_manager,
             app_controller=self.app_controller
         )

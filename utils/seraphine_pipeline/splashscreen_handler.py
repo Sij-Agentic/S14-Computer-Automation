@@ -9,7 +9,7 @@ import sys
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 # Use YOUR existing infrastructure
-from gui_controller import SimpleWindowAPI
+from utils.gui_controller import SimpleWindowAPI
 from fdom.screenshot_manager import ScreenshotManager  
 from fdom.visual_differ import VisualDiffer
 

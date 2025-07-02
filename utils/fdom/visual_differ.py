@@ -11,6 +11,7 @@ from PIL import Image
 from rich.console import Console
 from rich.panel import Panel
 import time
+from utils.fdom.config_manager import ConfigManager
 
 class VisualDiffer:
     """

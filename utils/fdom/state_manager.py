@@ -16,8 +16,8 @@ from rich.tree import Tree
 from rich.progress import Progress, TextColumn, BarColumn, TaskProgressColumn
 from rich import print as rprint
 
-from config_manager import ConfigManager
-from seraphine_integrator import SeraphineIntegrator
+from utils.fdom.config_manager import ConfigManager
+from utils.fdom.seraphine_integrator import SeraphineIntegrator
 
 
 @dataclass

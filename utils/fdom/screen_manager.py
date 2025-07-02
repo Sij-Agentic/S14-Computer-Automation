@@ -13,6 +13,7 @@ from rich.panel import Panel
 from rich import print as rprint
 import numpy as np
 from PIL import Image
+from utils.fdom.config_manager import ConfigManager
 
 class ScreenManager:
     """
@@ -307,10 +308,6 @@ def test_screen_manager():
     
     try:
         # Import ConfigManager from DELTA 1
-        from config_manager import ConfigManager
-        
-        # Test 1: Initialize with config
-        console.print("[yellow]🔧 Initializing ScreenManager...[/yellow]")
         config_manager = ConfigManager()
         screen_manager = ScreenManager(config_manager)
         console.print("[green]✅ ScreenManager initialized successfully[/green]")
@@ -339,7 +336,7 @@ def test_screen_manager():
                     screenshot_rgb = screenshot[:, :, [0, 1, 2]]
                     img = Image.fromarray(screenshot_rgb)
                     img.save(f"test_capture_screen_{selected}.png")
-                    console.print(f"[green]�� Saved test_capture_screen_{selected}.png[/green]")
+                    console.print(f"[green]✅ Saved test_capture_screen_{selected}.png[/green]")
                 else:
                     console.print("[red]❌ Screen capture failed[/red]")
                     detection_result = False
@@ -375,7 +372,6 @@ if __name__ == "__main__":
         success = test_screen_manager()
         exit(0 if success else 1)
     elif args.interactive:
-        from config_manager import ConfigManager
         config = ConfigManager()
         sm = ScreenManager(config)
         selected = sm.prompt_user_selection()

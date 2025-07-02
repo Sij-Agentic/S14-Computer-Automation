@@ -17,7 +17,8 @@ import json
 
 # Add parent directory to path for gui_controller import
 sys.path.append(str(Path(__file__).parent.parent))
-from gui_controller import SimpleWindowAPI
+from utils.gui_controller import SimpleWindowAPI
+from utils.fdom.config_manager import ConfigManager
 
 class AppController:
     """
@@ -726,7 +727,6 @@ def test_app_controller():
     
     try:
         # Import previous deltas
-        from config_manager import ConfigManager
         from screen_manager import ScreenManager
         
         # Test 1: Initialize components
@@ -813,7 +813,6 @@ if __name__ == "__main__":
     
     if args.test_launch:
         # Test with custom executable
-        from config_manager import ConfigManager
         from screen_manager import ScreenManager
         
         config = ConfigManager()

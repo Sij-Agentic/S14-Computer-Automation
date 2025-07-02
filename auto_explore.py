@@ -2,10 +2,15 @@ import os
 import sys
 import subprocess
 import time
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).parent))
 
 # Path to your application executable
-APP_PATH = ""  # 
-APP_NAME = "skype" 
+APP_PATH = 'C:/Program Files/VideoLAN/VLC/vlc.exe'
+APP_NAME = "vlc"
+
+from utils.fdom.config_manager import ConfigManager
 
 # Step 1: Create initial fDOM structure
 print("Step 1: Creating initial fDOM structure...")
@@ -27,7 +32,7 @@ process.stdin.write("-1\n")
 process.stdin.flush()
 
 # Step 4: Wait for auto-exploration to complete (50 iterations)
-print("Step 4: Waiting for exploration to complete 
+print("Step 4: Waiting for exploration to complete")
 # The exploration will run for 50 iterations
 
 # Step 5: Send Enter to continue after auto-exploration completes
