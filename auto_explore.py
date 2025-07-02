@@ -2,6 +2,7 @@ import os
 import sys
 import subprocess
 import time
+import threading
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -23,31 +24,46 @@ process = subprocess.Popen(
     stdin=subprocess.PIPE,
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
-    text=True
+    text=True,
+    bufsize=1  # Line buffered
 )
 
-# Step 3: Send "-1" to start auto-exploration
-print("Step 3: Triggering auto-exploration...")
-process.stdin.write("-1\n")
-process.stdin.flush()
+# Function to continuously read output
+def read_output(process):
+    while True:
+        line = process.stdout.readline()
+        if not line:
+            break
+        print(f"OUTPUT: {line.strip()}")
 
-# Step 4: Wait for auto-exploration to complete (50 iterations)
-print("Step 4: Waiting for exploration to complete")
-# The exploration will run for 50 iterations
+# Start thread to read output
+output_thread = threading.Thread(target=read_output, args=(process,))
+output_thread.daemon = True
+output_thread.start()
 
-# Step 5: Send Enter to continue after auto-exploration completes
-# Wait for the 50 iterations to complete
-# This timing depends on your application and computer speed
-time.sleep(300)
-process.stdin.write("\n")
-process.stdin.flush()
+# Step 3: Explore 50 nodes by selecting them one by one
+print("Step 3: Starting exploration of 50 nodes...")
 
-# Step 6: Send "quit" to exit interactive mode
+# Wait for the interactive prompt to initialize
+time.sleep(5)
+
+# Explore 50 nodes
+for i in range(50):
+    # Always select the first node (number 1)
+    print(f"Selecting node {i+1}/50...")
+    process.stdin.write("1\n")
+    process.stdin.flush()
+    
+    # Wait for the interaction to complete
+    # This timing might need adjustment based on your application
+    time.sleep(10)  # Wait 10 seconds between interactions
+
+# Step 4: Send "quit" to exit interactive mode
+print("Step 4: Finishing up...")
 process.stdin.write("quit\n")
 process.stdin.flush()
 
 # Wait for process to complete
-print("Step 6: Finishing up...")
 process.wait()
 
 print("Auto-exploration complete! Check the fDOM results in apps/" + APP_NAME + "/")
