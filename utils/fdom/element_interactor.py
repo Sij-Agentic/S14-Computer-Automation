@@ -45,6 +45,7 @@ from utils.fdom.screenshot_manager import ScreenshotManager
 from utils.fdom.state_processor import StateProcessor
 from utils.fdom.navigation_engine import NavigationEngine
 from utils.fdom.click_engine import ClickEngine
+from utils.fdom.window_focus_manager import WindowFocusManager
 
 
 class ElementInteractor:
@@ -116,11 +117,12 @@ class ElementInteractor:
         self.visual_differ = VisualDiffer(self.config)
         
         # Initialize modular components
+        self.window_focus_manager = WindowFocusManager(self.app_controller, self.config)
         self.interactive_cli = InteractiveCLI(self)
-        self.screenshot_manager = ScreenshotManager(self.app_controller, self.visual_differ, debug_mode=True)
+        self.screenshot_manager = ScreenshotManager(self.app_controller, self.visual_differ, debug_mode=True, focus_manager=self.window_focus_manager)
         self.state_processor = StateProcessor(self.state_manager, self.seraphine_integrator, self.visual_differ)
         self.navigation_engine = NavigationEngine(self.app_controller, self.visual_differ, self.state_manager, self)
-        self.click_engine = ClickEngine(self.app_controller, self.visual_differ, self.config)
+        self.click_engine = ClickEngine(self.app_controller, self.visual_differ, self.config, focus_manager=self.window_focus_manager)
         
         # Interaction settings
         self.click_offset = self.config.get("interaction.click_center_offset", 2)
@@ -189,6 +191,10 @@ class ElementInteractor:
                 "state_changed": False
             }
         
+        # ✅ ENSURE WINDOW FOCUS BEFORE SCREENSHOT
+        if not self.window_focus_manager.prepare_for_screenshot():
+            return ClickResult(success=False, state_changed=False, error_message="Could not ensure window focus for screenshot")
+        
         # ✅ CAPTURE BEFORE SCREENSHOT FIRST - BEFORE NAVIGATION
         before_screenshot = self.screenshot_manager.take_screenshot("before_click")
         if not before_screenshot:
@@ -241,6 +247,10 @@ class ElementInteractor:
         source_element_name = node_data.get('g_icon_name', 'unknown')
         self.console.print(f"\n[bold yellow]🎯 CLICKING ELEMENT: {node_id}[/bold yellow]")
         self.console.print(f"[cyan]📍 Target: {source_element_name}[/cyan]")
+        
+        # ✅ ENSURE WINDOW FOCUS BEFORE CLICKING
+        if not self.window_focus_manager.prepare_for_interaction():
+            return ClickResult(success=False, state_changed=False, error_message="Could not ensure window focus for interaction")
         
         # ✅ DELEGATE TO CLICK ENGINE
         click_result = self.click_engine.execute_click_with_centroids(

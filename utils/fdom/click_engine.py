@@ -11,23 +11,31 @@ from utils.fdom.screenshot_manager import ScreenshotManager
 class ClickEngine:
     """Handles actual clicking operations with advanced strategies"""
     
-    def __init__(self, app_controller, visual_differ, config):
+    def __init__(self, app_controller, visual_differ, config, focus_manager=None):
         self.app_controller = app_controller
         self.visual_differ = visual_differ
         self.config = config
         self.console = Console()
         self.screenshot_manager = ScreenshotManager(app_controller, visual_differ)
+        self.focus_manager = focus_manager
         
     def execute_click_with_centroids(self, node_data: Dict, window_pos: Dict, 
                                    source_element_name: str) -> ClickResult:
         """Execute 3-centroid clicking strategy with verification"""
         
         # ✅ CRITICAL: Ensure window has focus before clicking
-        if not self._ensure_window_has_focus():
+        if self.focus_manager and hasattr(self.focus_manager, 'prepare_for_interaction'):
+            if not self.focus_manager.prepare_for_interaction():
+                return ClickResult(
+                    success=False, 
+                    state_changed=False, 
+                    error_message="Failed to ensure window focus via focus manager"
+                )
+        elif not self._ensure_window_has_focus():
             return ClickResult(
                 success=False, 
                 state_changed=False, 
-                error_message="Failed to ensure window focus"
+                error_message="Failed to ensure window focus via fallback method"
             )
         
         # Calculate adaptive centroids based on element shape

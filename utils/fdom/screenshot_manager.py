@@ -12,11 +12,12 @@ import mss
 class ScreenshotManager:
     """Handles screenshot capture, storage, and cleanup"""
     
-    def __init__(self, app_controller, visual_differ, debug_mode: bool = True):
+    def __init__(self, app_controller, visual_differ, debug_mode: bool = True, focus_manager=None):
         self.app_controller = app_controller
         self.visual_differ = visual_differ
         self.console = Console()
         self.debug_mode = debug_mode
+        self.focus_manager = focus_manager
         
     def take_screenshot(self, suffix: str) -> Optional[str]:
         """Take screenshot of the current app window"""
@@ -24,6 +25,12 @@ class ScreenshotManager:
             if not self.app_controller or not self.app_controller.current_app_info:
                 self.console.print("[red]❌ No app controller or app info available[/red]")
                 return None
+            
+            # ✅ FOCUS CHECK: Ensure window is focused before screenshot
+            if self.focus_manager and hasattr(self.focus_manager, 'ensure_target_window_focused'):
+                if not self.focus_manager.ensure_target_window_focused():
+                    self.console.print("[yellow]⚠️ Focus verification failed for screenshot - proceeding anyway[/yellow]")
+                    # Don't fail completely, just warn and continue
             
             # Generate custom filename with timestamp and suffix
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")

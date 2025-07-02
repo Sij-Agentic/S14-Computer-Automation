@@ -87,6 +87,8 @@ class DeepExplorer:
             'menus_discovered': 0,
             'deadends_found': 0,
             'max_depth_reached': 0,
+            'focus_failures': 0,
+            'focus_recoveries': 0,
             'exploration_start_time': None,
             'exploration_end_time': None
         }
@@ -336,6 +338,9 @@ class DeepExplorer:
                 self.stats['failed_interactions'] += 1
                 self.console.print(f"[red]    ❌ Interaction failed: {result.error_message}[/red]")
             
+            # Monitor focus status after each interaction
+            self._monitor_focus_status()
+            
             # Secondary interaction: Right click for context menus (if enabled)
             if (self.strategy.explore_context_menus and 
                 element_type in ['icon', 'button'] and 
@@ -447,6 +452,32 @@ class DeepExplorer:
         elapsed = (datetime.now() - self.stats['exploration_start_time']).total_seconds()
         return elapsed < self.strategy.total_timeout
     
+    def _monitor_focus_status(self) -> None:
+        """Monitor window focus status and update statistics"""
+        try:
+            if (self.element_interactor and 
+                hasattr(self.element_interactor, 'window_focus_manager') and
+                self.element_interactor.window_focus_manager):
+                
+                focus_manager = self.element_interactor.window_focus_manager
+                focus_status = focus_manager.get_focus_status_summary()
+                
+                # Update statistics
+                current_failures = focus_status.get('focus_failure_count', 0)
+                if current_failures > self.stats['focus_failures']:
+                    self.stats['focus_failures'] = current_failures
+                
+                # Check if focus verification is disabled (indication of recovery issues)
+                if not focus_status.get('focus_verification_enabled', True):
+                    self.console.print("[yellow]⚠️ Window focus verification has been disabled due to repeated failures[/yellow]")
+                
+                # Log focus status periodically
+                if self.stats['total_interactions'] % 20 == 0 and self.stats['total_interactions'] > 0:  # Every 20 interactions
+                    self.console.print(f"[dim]🎯 Focus Status: {current_failures} failures, verification {'enabled' if focus_status.get('focus_verification_enabled', True) else 'disabled'}[/dim]")
+                    
+        except Exception as e:
+            self.console.print(f"[dim yellow]⚠️ Focus monitoring error: {e}[/dim]")
+    
     def _generate_exploration_report(self) -> Dict:
         """Generate comprehensive exploration report"""
         
@@ -472,7 +503,9 @@ class DeepExplorer:
                 "dialogs_discovered": self.stats['dialogs_discovered'],
                 "menus_discovered": self.stats['menus_discovered'],
                 "deadends_found": self.stats['deadends_found'],
-                "max_depth_reached": self.stats['max_depth_reached']
+                "max_depth_reached": self.stats['max_depth_reached'],
+                "focus_failures": self.stats['focus_failures'],
+                "focus_recoveries": self.stats['focus_recoveries']
             },
             "discovered_states": {
                 state_id: {
@@ -523,7 +556,8 @@ class DeepExplorer:
             f"📄 Dialogs: {summary['dialogs_discovered']}\n"
             f"📋 Menus: {summary['menus_discovered']}\n"
             f"📊 Max Depth: {summary['max_depth_reached']}\n"
-            f"⛔ Dead Ends: {summary['deadends_found']}",
+            f"⛔ Dead Ends: {summary['deadends_found']}\n"
+            f"🎯 Focus Issues: {summary['focus_failures']} failures",
             title="🔬 Deep Exploration Results",
             border_style="green"
         )
